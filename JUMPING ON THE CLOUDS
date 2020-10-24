@@ -1,0 +1,21 @@
+n = int(input())
+c = list(map(int, input().rstrip().split()))
+minimum = 0
+j = 0
+for i in range(n):
+    if j!=n-1 and j!=n-2 and j!=n-3:
+        if c[j+2]==1:
+            minimum=minimum+1
+            j = j+1
+        else:
+            minimum=minimum+1
+            j = j+2
+    elif j==n-1:
+        break
+    elif j == n-2:
+        minimum = minimum+1
+        break
+    elif j == n-3:
+        minimum = minimum+1
+        break
+print(minimum)
