@@ -1,0 +1,15 @@
+a = int(input())
+if a>=1919:
+    c = str(a)
+    if (a%4 == 0 and a%100!=0) or a%400 == 0:
+        print("12.09."+c)
+    else:
+        print("13.09."+c)
+elif a==1918:
+    print("26.09.1918")
+else:
+    c = str(a)
+    if a%4 == 0:
+        print("12.09."+c)
+    else:
+        print("13.09."+c)
