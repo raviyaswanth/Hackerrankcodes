@@ -1,0 +1,9 @@
+import math
+hi = 0
+hi2 = 5
+num = int(input())
+for i in range(num):
+    hi2 = math.floor(hi2/2)
+    hi = hi+hi2
+    hi2 = hi2*3
+print(hi)
