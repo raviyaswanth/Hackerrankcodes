@@ -1,0 +1,4 @@
+a = int(input())
+b = input()
+arr = list(map(int,input().rstrip().split()))
+print(arr.index(a))
