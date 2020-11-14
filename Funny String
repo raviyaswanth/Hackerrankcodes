@@ -1,0 +1,31 @@
+def check_string(x):
+    m1 = []
+    final1 = []
+    t = x[::-1]
+    for j in x:
+        m1.append(ord(j))
+    l = len(m1)
+    for j in range(l-1):
+        a = abs(m1[j]-m1[j+1])
+        final1.append(a)
+    m2 = []
+    final2 = []
+    for j in t:
+        m2.append(ord(j))
+    l = len(m2)
+    for j in range(l-1):
+        a = abs(m2[j]-m2[j+1])
+        final2.append(a)
+    if final1 == final2:
+        return(True)
+    else :
+        return(False)
+        
+        
+v = int(input())
+for k in range(v):
+    p  = input()
+    if check_string(p):
+        print("Funny")
+    else:
+        print("Not Funny")
