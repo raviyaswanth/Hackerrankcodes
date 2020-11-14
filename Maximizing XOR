@@ -1,0 +1,8 @@
+a = int(input())
+b = int(input())
+m = []
+for j in range(a,b+1):
+    for k in range(a,b+1):
+        c = (j^k)
+        m.append(c)
+print(max(m))
