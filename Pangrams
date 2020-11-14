@@ -1,0 +1,11 @@
+a = input()
+c=a.upper()
+b = []
+for i in c:
+    if i!= " ":
+        b.append(i)
+b =  list(dict.fromkeys(b))
+if len(b)==26:
+    print("pangram")
+else:
+    print("not pangram")
