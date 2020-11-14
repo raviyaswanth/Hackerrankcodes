@@ -1,0 +1,15 @@
+a = int(input())
+arr = list(map(int, input().rstrip().split()))
+b = arr[0]
+final = []
+for k in arr:
+    if k<b:
+        final.append(k)
+for k in arr:
+    if k==b:
+        final.append(k)
+for k in arr:
+    if k>b:
+        final.append(k)
+for k in final:
+    print(k,end=" ")
