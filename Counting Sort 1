@@ -1,0 +1,12 @@
+a = int(input())
+arr = list(map(int,input().rstrip().split()))
+final = []
+sum = 0
+for i in range(0,100):
+    for j in arr:
+        if i==j:
+            sum = sum+1
+    final.append(sum)
+    sum = 0
+for k in final:
+    print(k,end=" ")
