@@ -1,0 +1,13 @@
+n = int(input())
+for i in range(0,n):
+    amount,price,exchange = map(int,input().split())
+    total = int(amount/price)
+    first = int(amount/price)
+    rand = 0
+    while first>=exchange:
+        rand = rand+int(first/exchange)
+        first = first%exchange
+        first = first+rand
+        total = total+rand
+        rand = 0
+    print(total)
