@@ -1,0 +1,21 @@
+a = int(input())
+num = []
+num2 = []
+for i in range(0,a):
+    c = input()
+    num.append(c)
+    num2.append(c)
+if len(num)<=2:
+    for j in num:
+        print(j)
+else:
+    for k in range(1,len(num)-1):
+        
+        for l in range(1,len(num)-1):
+            
+            if int(num[k][l])>int(num[k][l-1]) and int(num[k][l+1])<int(num[k][l]) and int(num[k-1][l])<int(num[k][l]) and int(num[k+1][l])<int(num[k][l]):
+                num2[k] = num2[k][:l]+"X"+num2[k][l+1:]
+                
+            
+    for t in num2 :
+        print(t)
