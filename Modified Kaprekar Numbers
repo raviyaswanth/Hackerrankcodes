@@ -1,0 +1,22 @@
+a = int(input())
+b = int(input())
+m = []
+for i in range(a,b+1):
+    c = i**2
+    d = str(c)[::-1]
+    e = str(i)
+    l = len(e)
+    r = d[0:l][::-1]
+    l = d[l:][::-1]
+    if i<4:
+        if int(r)==i:
+            m.append(i)
+    else :
+        if int(r)+int(l)==i:
+            m.append(i)
+if len(m)!=0:
+    for k in m :
+        print(k,end=" ")
+else:
+    print("INVALID RANGE")
+            
