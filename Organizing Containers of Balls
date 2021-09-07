@@ -1,0 +1,14 @@
+def organizingContainers(container):
+    # Write your code here
+    arr_rows = []
+    arr_columns = []
+    for i in range(0,len(container)):
+        sum_ = 0
+        arr_rows.append(sum(container[i]))
+        for j in range(0,len(container)):
+            sum_ += container[j][i]
+        arr_columns.append(sum_)
+    for j in arr_rows :
+        if j not in arr_columns:
+            return "Impossible"
+    return "Possible"
