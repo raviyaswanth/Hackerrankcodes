@@ -1,0 +1,19 @@
+def getMinimumCost(k, c):
+    total_flowers = len(c)
+    if(k==total_flowers):
+        return sum(c)
+    c.sort(reverse=True)
+    cost = 0
+    ind = 0
+    people = 0
+    i =1
+    while(total_flowers>0):
+        
+        cost += i*c[ind]
+        ind+=1
+        people+=1
+        if(people==k):
+            people = 0
+            i+=1
+        total_flowers-=1
+    return cost
